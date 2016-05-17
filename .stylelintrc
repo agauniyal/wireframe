@@ -1,6 +1,5 @@
 {
   "rules": {
-    "at-rule-empty-line-before": "always",
     "at-rule-no-vendor-prefix": true,
     "block-closing-brace-newline-after": "always",
     "block-closing-brace-newline-before": "always-multi-line",
@@ -45,7 +44,6 @@
     "media-query-list-comma-newline-before": "never-multi-line",
     "media-query-list-comma-space-after": "always-single-line",
     "media-query-list-comma-space-before": "never",
-    "media-query-parentheses-space-inside": "always",
     "no-eol-whitespace": true,
     "no-missing-eof-newline": true,
     "number-leading-zero": "always",
@@ -57,11 +55,8 @@
     "selector-combinator-space-before": "always",
     "selector-list-comma-newline-after": "always-multi-line",
     "selector-list-comma-newline-before": "never-multi-line",
-    "selector-list-comma-space-after": "always",
     "selector-list-comma-space-before": "never",
-    "selector-no-universal": true,
     "selector-no-vendor-prefix": true,
-    "selector-pseudo-element-colon-notation": "double",
     "selector-root-no-composition": true,
     "string-quotes": "double",
     "value-list-comma-newline-after": "always-multi-line",

@@ -1,0 +1,12 @@
+.noborder {
+  border: 0!important;
+}
+
+[data-balloon] {
+  &:after,
+  &:before,
+  &:hover:before,
+  &:hover:before {
+    font-family: sans-serif;
+  }
+}
