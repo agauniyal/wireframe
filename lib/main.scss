@@ -10,7 +10,6 @@
   max-width       : 90%;
   min-height      : 200px;
   margin          : 2rem auto;
-  font-family     : "redacted";
   transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   &:hover {
     background-color: #ffffff;
@@ -25,7 +24,6 @@
   margin          : 1rem;
   height          : 100px;
   background-color: $box-background-color;
-  font-family     : "redacted";
   transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   &:hover {
     background-color: lighten($box-background-color,3%);
