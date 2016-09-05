@@ -1,5 +1,6 @@
 button,
-input[type="submit"] {
+input[type="submit"],
+input[type="reset"] {
   background   : $box-background-color;
   border       : 2px solid $box-border-color;
   border-bottom: 4px solid darken($box-background-color,10%);
@@ -23,7 +24,12 @@ input[type="submit"] {
   }
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"] {
   background   : $base-color;
   border       : 2px solid $box-border-color;
   border-bottom: 4px solid darken($box-background-color,10%);
