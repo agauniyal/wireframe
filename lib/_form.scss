@@ -1,3 +1,7 @@
+form {
+  width: 70%;
+}
+
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -36,6 +40,7 @@ input[type="url"] {
   padding      : .5rem 1rem;
   font-family  : "sans-serif";
   transition   : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
+  width        : 70%;
   &:focus {
     outline: none;
   }
