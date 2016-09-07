@@ -1,0 +1,25 @@
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+th {
+  height: 2rem;
+  background-color: $box-background-color;
+}
+
+tr {
+  transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
+  &:hover {
+    background-color: lighten($box-background-color,3%);
+    border-color    : darken($border-color,5%);
+    transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
+  }
+}
+
+table,
+th,
+td {
+  border: 2px solid $box-border-color;
+  padding: .5rem;
+}
