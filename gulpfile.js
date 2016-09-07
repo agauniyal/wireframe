@@ -44,9 +44,6 @@ gulp.task('sass', ['clean'], function() {
 	return gulp.src('lib/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(autoprefixer({
-			browsers: ['last 3 versions']
-		}))
 		.pipe(sourcemaps.write())
 		.pipe(cssfmt())
 		.pipe(eol())
@@ -56,6 +53,9 @@ gulp.task('sass', ['clean'], function() {
 gulp.task('css-min', ['sass', 'down-normalize', 'down-tip'], function() {
 
 	return gulp.src(['css/normalize.css', 'css/**/*.css'])
+		.pipe(autoprefixer({
+			browsers: ['last 3 versions']
+		}))
 		.pipe(cssnano())
 		.pipe(concat('wmin.css'))
 		.pipe(gulp.dest('min'));
@@ -67,6 +67,7 @@ gulp.task('lint-css', ['css-min'], function lintCssTask() {
 		.src(['css/**/*.css', '!css/normalize.css', '!css/bmin.css'])
 		.pipe(gulpStylelint({
 			reporters: [{
+        failAfterError: false,
 				formatter: 'string',
 				console: true
 			}]
