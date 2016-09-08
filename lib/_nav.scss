@@ -1,0 +1,11 @@
+.logo {
+  margin-right: auto;
+  font-size: 2rem;
+  margin-left: 20px;
+  background-color: $font-color;
+}
+
+.nav {
+  @extend .container;
+  min-height: 50px !important;
+}

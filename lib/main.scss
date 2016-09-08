@@ -1,6 +1,7 @@
 @import 'base';
 @import 'form';
 @import 'table';
+@import 'nav';
 @import 'misc';
 
 .container {
@@ -13,7 +14,7 @@
   margin          : 2rem auto;
   transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   &:hover {
-    background-color: #ffffff;
+    background-color: #fff;
     border-color    : darken($border-color,5%);
     transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   }
@@ -62,4 +63,8 @@
     background-color: lighten($border-color,3%);
     transition      : background-color 300ms ease 50ms;
   }
+}
+
+.products > div {
+  height: 200px;
 }
