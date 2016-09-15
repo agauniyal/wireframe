@@ -6,28 +6,6 @@
   <link href="min/wmin.css" type="text/css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Wireframes made easy </title>
-  <style>
-    .logo {
-      margin-right: auto;
-      font-size: 2rem;
-      margin-left: 20px;
-      background-color: #8A939F;
-    }
-
-    .nav {
-      min-height: 50px;
-    }
-
-    .products > div {
-      height: 200px;
-    }
-
-    form,
-    form input[type="text"] {
-      width: 70%;
-    }
-
-  </style>
 </head>
 
 <body>
@@ -61,7 +39,122 @@
       <input type="text"></input>
       <button>Submit</button>
     </form>
+  </div>
 
+  <div class="container noborder">
+    <div class="control-group">
+      <h1>Checkbox</h1>
+      <label class="control control--checkbox">First
+        <input type="checkbox" checked="checked"/>
+        <div class="control__indicator"></div>
+      </label>
+      <label class="control control--checkbox">Second
+        <input type="checkbox"/>
+        <div class="control__indicator"></div>
+      </label>
+      <label class="control control--checkbox">Disabled
+        <input type="checkbox" disabled="disabled"/>
+        <div class="control__indicator"></div>
+      </label>
+      <label class="control control--checkbox">Disabled & checked
+        <input type="checkbox" disabled="disabled" checked="checked"/>
+        <div class="control__indicator"></div>
+      </label>
+    </div>
+    <div class="control-group">
+      <h1>Radio Button</h1>
+      <label class="control control--radio">First
+        <input type="radio" name="radio" checked="checked"/>
+        <div class="control__indicator"></div>
+      </label>
+      <label class="control control--radio">Second
+        <input type="radio" name="radio"/>
+        <div class="control__indicator"></div>
+      </label>
+      <label class="control control--radio">Disabled
+        <input type="radio" name="radio2" disabled="disabled"/>
+        <div class="control__indicator"></div>
+      </label>
+      <label class="control control--radio">Disabled & checked
+        <input type="radio" name="radio2" disabled="disabled" checked="checked"/>
+        <div class="control__indicator"></div>
+      </label>
+    </div>
+    <div class="control-group">
+      <h1>Select boxes</h1>
+      <div class="select">
+        <select>
+          <option>First select</option>
+          <option>Option</option>
+          <option>Option</option>
+        </select>
+        <div class="select__arrow"></div>
+      </div>
+      <div class="select">
+        <select>
+          <option>Second select</option>
+          <option>Option</option>
+          <option>Option</option>
+        </select>
+        <div class="select__arrow"></div>
+      </div>
+      <div class="select">
+        <select disabled="disabled">
+          <option>Disabled</option>
+          <option>Option</option>
+          <option>Option</option>
+        </select>
+        <div class="select__arrow"></div>
+      </div>
+    </div>
+    <div class="control-group">
+      <h1>Text Area</h1>
+      <textarea rows="5">asdfasdfasdf asdfas asdfasdf asdfasdfasdf asdfasdf asdf aasdf</textarea>
+    </div>
+  </div>
+
+  <div class="container noborder">
+    <table>
+      <tr>
+        <th>asdf asdasdf</th>
+        <th>asdfasdfaasd</th>
+        <th>asd fewga sd</th>
+      </tr>
+      <tr>
+        <td>asdf asdfasdaasdf asdfsdf</td>
+        <td>asdasdfasdf asdfasd afdsf</td>
+        <td>asdfasdf asdfas asdfasdff</td>
+      </tr>
+      <tr>
+        <td>asdfasdf asdfass asdfafa</td>
+        <td>asdfa asdfasdf adsfasdfa</td>
+        <td>asfdasdf asdfas sdfsd as</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container noborder">
+    <ul>
+      <li>asdfa asdfasdf asdfasdf</li>
+      <li>asdfasdf asdfafdsa asdf</li>
+      <li>asdfasdfasdf asdf asdfa</li>
+      <li>asdfasdf asdfasasd asdf</li>
+      <li>asdfasdf asdfa sdfasdf</li>
+    </ul>
+    <ul>
+      <li>asdfa asdfasdf asdfasdf</li>
+      <li>asdfasdf asdfafdsa asdf</li>
+      <li>asdfasdfasdf asdf asdfa</li>
+      <li>asdfasdf asdfasasd asdf</li>
+      <li>asdfasdf asdfa sdfasdf</li>
+    </ul>
+    <ul>
+      <li>asdfa asdfasdf asdfasdf</li>
+      <li>asdfasdf asdfafdsa asdf</li>
+      <li>asdfasdfasdf asdf asdfa</li>
+      <li>asdfasdf asdfasasd asdf</li>
+      <li>asdfasdf asdfa sdfasdf</li>
+    </ul>
   </div>
 
 </body>
