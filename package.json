@@ -1,32 +1,40 @@
 {
-  "name": "wireframe",
-  "version": "0.0.1",
-  "description": "minimal wireframing css-framework",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/agauniyal/wireframe.git"
-  },
-  "keywords": [
-    "wireframe",
-    "css",
-    "framework"
-  ],
-  "author": "Abhinav Gauniyal",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/agauniyal/wireframe/issues"
-  },
-  "homepage": "https://github.com/agauniyal/wireframe#readme",
-  "devDependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssfmt": "^1.0.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-eol": "^0.1.2",
-    "gulp-sass": "^2.3.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylelint": "^2.0.2"
-  }
+    "name": "wireframe"
+    , "version": "0.0.1"
+    , "description": "minimal wireframing css-framework"
+    , "repository": {
+        "type": "git"
+        , "url": "git+https://github.com/agauniyal/wireframe.git"
+    }
+    , "keywords": [
+    "wireframe"
+    , "css"
+    , "framework"
+  ]
+    , "author": "Abhinav Gauniyal"
+    , "license": "MIT"
+    , "scripts": {
+        "commit": "git-cz"
+    }
+    , "bugs": {
+        "url": "https://github.com/agauniyal/wireframe/issues"
+    }
+    , "homepage": "https://github.com/agauniyal/wireframe#readme"
+    , "devDependencies": {
+        "commitizen": "2.8.6"
+        , "cz-conventional-changelog": "1.2.0"
+        , "del": "^2.2.0"
+        , "gulp": "^3.9.1"
+        , "gulp-autoprefixer": "^3.1.0"
+        , "gulp-concat": "^2.6.0"
+        , "gulp-cssfmt": "^1.0.0"
+        , "gulp-cssnano": "^2.1.2"
+        , "gulp-eol": "^0.1.2"
+        , "gulp-sass": "^2.3.1"
+        , "gulp-sourcemaps": "^1.6.0"
+        , "gulp-stylelint": "^2.0.2"
+    }
+    , "czConfig": {
+        "path": "node_modules/cz-conventional-changelog"
+    }
 }
