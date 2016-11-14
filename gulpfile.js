@@ -16,7 +16,7 @@ const request = require('request');
 const fs = require('fs');
 
 
-gulp.task('default', ['down-normalize', 'down-tip', 'lint-css', 'css-min', 'server']);
+gulp.task('default', ['down-normalize', 'down-tip', 'lint-css', 'css-min', 'server', 'open']);
 
 gulp.task('down-normalize', function() {
 	fs.access('css/normalize.css', fs.F_OK, function(err) {
