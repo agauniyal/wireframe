@@ -30,5 +30,8 @@
     "gulp-stylelint": "^2.0.2",
     "gulp-open": "^2.0.0",
     "gulp-connect": "^5.0.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.8"
   }
 }
