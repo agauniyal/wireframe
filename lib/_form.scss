@@ -1,5 +1,7 @@
 form {
   width: 70%;
+  @include breakpoint(phablet) { width: 100%; }
+  @include breakpoint(mobileonly) { width: 100%; }
 }
 
 button,

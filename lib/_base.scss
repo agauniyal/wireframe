@@ -12,6 +12,16 @@
 html {
   height: 100%;
   font-family: redacted;
+  @include breakpoint( phablet ) {
+    font-size     : 112%!important;
+  }
+  @include breakpoint( desktop ) {
+    font-size     : 120%!important;
+  }
+  @include breakpoint( mobileonly ) {
+    font-size     : 40%!important;
+    line-height   : 0.5rem;
+  }
 }
 
 body {
@@ -22,16 +32,5 @@ body {
   min-height      : 100%;
 }
 
-/* Medium screens (640px) */
-@media (min-width: 40rem) {
-  html {
-    font-size: 112%;
-  }
-}
 
-/* Large screens (1024px) */
-@media (min-width: 64rem) {
-  html {
-    font-size: 120%;
-  }
-}
+

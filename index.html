@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="wireframe">
 
 <head>
   <meta charset="utf-8">
   <link href="min/wmin.css" type="text/css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Wireframes made easy </title>
+  
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="js/app.js"></script>
 </head>
 
 <body>
@@ -42,119 +45,46 @@
   </div>
 
   <div class="container noborder">
-    <div class="control-group">
-      <h1>Checkbox</h1>
-      <label class="control control--checkbox">First
-        <input type="checkbox" checked="checked"/>
-        <div class="control__indicator"></div>
-      </label>
-      <label class="control control--checkbox">Second
-        <input type="checkbox"/>
-        <div class="control__indicator"></div>
-      </label>
-      <label class="control control--checkbox">Disabled
-        <input type="checkbox" disabled="disabled"/>
-        <div class="control__indicator"></div>
-      </label>
-      <label class="control control--checkbox">Disabled & checked
-        <input type="checkbox" disabled="disabled" checked="checked"/>
-        <div class="control__indicator"></div>
-      </label>
-    </div>
-    <div class="control-group">
-      <h1>Radio Button</h1>
-      <label class="control control--radio">First
-        <input type="radio" name="radio" checked="checked"/>
-        <div class="control__indicator"></div>
-      </label>
-      <label class="control control--radio">Second
-        <input type="radio" name="radio"/>
-        <div class="control__indicator"></div>
-      </label>
-      <label class="control control--radio">Disabled
-        <input type="radio" name="radio2" disabled="disabled"/>
-        <div class="control__indicator"></div>
-      </label>
-      <label class="control control--radio">Disabled & checked
-        <input type="radio" name="radio2" disabled="disabled" checked="checked"/>
-        <div class="control__indicator"></div>
-      </label>
-    </div>
+    <control-group></control-group>
+    <control-group></control-group>
+    <control-group></control-group>
     <div class="control-group">
       <h1>Select boxes</h1>
       <div class="select">
         <select>
-          <option>First select</option>
-          <option>Option</option>
-          <option>Option</option>
+          <option ng-repeat="x in [1,2,3]">First select</option>
         </select>
         <div class="select__arrow"></div>
       </div>
       <div class="select">
         <select>
-          <option>Second select</option>
-          <option>Option</option>
-          <option>Option</option>
+          <option ng-repeat="x in [1,2,3]">Second select</option>
         </select>
         <div class="select__arrow"></div>
       </div>
       <div class="select">
         <select disabled="disabled">
-          <option>Disabled</option>
-          <option>Option</option>
-          <option>Option</option>
+          <option ng-repeat="x in [1,2,3]">Disabled</option>
         </select>
         <div class="select__arrow"></div>
       </div>
     </div>
-    <div class="control-group">
-      <h1>Text Area</h1>
-      <textarea rows="5">asdfasdfasdf asdfas asdfasdf asdfasdfasdf asdfasdf asdf aasdf</textarea>
-    </div>
+    <textarea-component rows="5"></textarea-component>
   </div>
 
   <div class="container noborder">
-    <table>
-      <tr>
-        <th>asdf asdasdf</th>
-        <th>asdfasdfaasd</th>
-        <th>asd fewga sd</th>
-      </tr>
-      <tr>
-        <td>asdf asdfasdaasdf asdfsdf</td>
-        <td>asdasdfasdf asdfasd afdsf</td>
-        <td>asdfasdf asdfas asdfasdff</td>
-      </tr>
-      <tr>
-        <td>asdfasdf asdfass asdfafa</td>
-        <td>asdfa asdfasdf adsfasdfa</td>
-        <td>asfdasdf asdfas sdfsd as</td>
-      </tr>
-    </table>
+    <table-component></table-component>
   </div>
 
   <div class="container noborder">
-    <ul>
+    <ul ng-repeat="x in [1,2,3]">
       <li>asdfa asdfasdf asdfasdf</li>
       <li>asdfasdf asdfafdsa asdf</li>
       <li>asdfasdfasdf asdf asdfa</li>
       <li>asdfasdf asdfasasd asdf</li>
       <li>asdfasdf asdfa sdfasdf</li>
     </ul>
-    <ul>
-      <li>asdfa asdfasdf asdfasdf</li>
-      <li>asdfasdf asdfafdsa asdf</li>
-      <li>asdfasdfasdf asdf asdfa</li>
-      <li>asdfasdf asdfasasd asdf</li>
-      <li>asdfasdf asdfa sdfasdf</li>
-    </ul>
-    <ul>
-      <li>asdfa asdfasdf asdfasdf</li>
-      <li>asdfasdf asdfafdsa asdf</li>
-      <li>asdfasdfasdf asdf asdfa</li>
-      <li>asdfasdf asdfasasd asdf</li>
-      <li>asdfasdf asdfa sdfasdf</li>
-    </ul>
+
   </div>
 
 </body>
