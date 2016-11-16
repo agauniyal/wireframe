@@ -10,6 +10,8 @@
 
 .padd {
   padding: 10px;
+  @include breakpoint(tablet) { padding: 8px; }
+  @include breakpoint(mobileonly) { padding: 4px; }
 }
 
 .row {

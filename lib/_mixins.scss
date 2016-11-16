@@ -1,7 +1,7 @@
+
 /*********************
 BREAKPOINTS
 *********************/
-
 @mixin breakpoint($point) {
   @if $point == desktop {
     @media (min-width: 70em) { @content ; }
@@ -17,5 +17,33 @@ BREAKPOINTS
   }
   @else if $point == mobileonly {
     @media (max-width: 37.5em)  { @content ; }
+  }
+}
+
+
+
+
+// HELPER WHEN DEVELOPING
+// SWITCH ON TO SEE WHAT $BP YOU ARE ON
+
+html {
+  &:after {
+    position: fixed;
+    z-index: 99999;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    color: black;
+    outline: 1px solid red;
+    text-align: center;
+    padding: 1% 4%;
+    font-family: 'monospace';
+    font-size: 2em;
+    @include breakpoint( mobileonly ) { content: 'mobileonly'}
+    @include breakpoint( phablet ) { content: 'phablet'}
+    @include breakpoint( tablet ) { content: 'tablet'}
+    @include breakpoint( laptop ) { content: 'laptop'}
+    @include breakpoint( desktop ) { content: 'desktop'}
+
   }
 }

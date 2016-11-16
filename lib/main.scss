@@ -10,8 +10,12 @@
   background-color: $base_color;
   padding         : 10px;
   border          : 2px solid $border-color;
+  width           : 90%;
   max-width       : 90%;
   min-height      : 200px;
+  @include breakpoint(mobileonly) {
+    min-height    : 120px;
+  }
   margin          : 2rem auto;
   transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   &:hover {
@@ -25,6 +29,12 @@
   padding         : 1rem;
   border          : 2px solid $box-border-color;
   margin          : 1rem;
+  @include breakpoint(phablet) {
+    margin        : 0.1rem;
+  }
+  @include breakpoint(mobileonly) {
+    margin        : 0.25rem;
+  }
   height          : 100px;
   background-color: $box-background-color;
   transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
@@ -58,6 +68,8 @@
 .header {
   background-color: $border-color;
   height          : 350px;
+  @include breakpoint(tablet) { height: 180px; }
+  @include breakpoint(mobileonly) { height: 120px; }
   width           : 100%;
   transition      : background-color 300ms ease 50ms;
   &:hover {
@@ -68,4 +80,7 @@
 
 .products > div {
   height: 200px;
+  @include breakpoint(mobileonly) {
+    height: 100px;
+  }
 }

@@ -1,5 +1,7 @@
 'use strict';
 
+const browserify = require('browserify');
+const watchify = require('watchify');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cssnano = require('gulp-cssnano');
