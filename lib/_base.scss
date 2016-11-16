@@ -13,13 +13,13 @@ html {
   height: 100%;
   font-family: redacted;
   @include breakpoint( phablet ) {
-    font-size     : 112%;
+    font-size     : 112%!important;
   }
   @include breakpoint( desktop ) {
-    font-size     : 120%;
+    font-size     : 120%!important;
   }
   @include breakpoint( mobileonly ) {
-    font-size     : 40%;
+    font-size     : 40%!important;
     line-height   : 0.5rem;
   }
 }

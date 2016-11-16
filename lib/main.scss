@@ -7,7 +7,7 @@
 
 .container {
   @extend .parent;
-  background-color: $base_color;
+  //background-color: $base_color;
   padding         : 10px;
   border          : 2px solid $border-color;
   width           : 90%;
@@ -15,11 +15,13 @@
   min-height      : 200px;
   @include breakpoint(mobileonly) {
     min-height    : 120px;
+    font-size: 50%;
+    line-height: 180%;
   }
   margin          : 2rem auto;
   transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   &:hover {
-    background-color: #fff;
+    //background-color: #fff;
     border-color    : darken($border-color,5%);
     transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   }
@@ -36,10 +38,10 @@
     margin        : 0.25rem;
   }
   height          : 100px;
-  background-color: $box-background-color;
+  //background-color: $box-background-color;
   transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   &:hover {
-    background-color: lighten($box-background-color,3%);
+    //background-color: lighten($box-background-color,3%);
     border-color    : darken($border-color,5%);
     transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   }
@@ -53,11 +55,16 @@
 .box3 {
   @extend .box;
   width: (100% / 3);
+
 }
 
 .box4 {
   @extend .box;
   width: (100% / 4);
+  @include breakpoint(mobileonly) {
+    max-width: (100% / 2);
+    width: (100% / 2);
+  }
 }
 
 .box5 {
@@ -65,8 +72,17 @@
   width: (100% / 5);
 }
 
+
+.box3,
+.box5 {
+  @include breakpoint(mobileonly) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .header {
-  background-color: $border-color;
+  //background-color: $border-color;
   height          : 350px;
   @include breakpoint(tablet) { height: 180px; }
   @include breakpoint(mobileonly) { height: 120px; }
