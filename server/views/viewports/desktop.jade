@@ -2,15 +2,20 @@
 extends ../layouts/base
 
 block title
-    title Article Title
+    title= title
 
-block content
+
+
+block header
     .container.nav.end.noborder
         span(class="child logo", data-balloon="Logo!", data-balloon-pos="down") LALALALA
         span(class="padd", data-balloon="Some link!", data-balloon-pos="down") Nav1dsad
         span(class="padd", data-balloon="Eg. Home", data-balloon-pos="up") Nav2 might contain
         span(class="padd", data-balloon="About Us! ", data-balloon-pos="down") Contact us
         span(class="padd", data-balloon="Contact Us! ", data-balloon-pos="up") Contact us
+
+
+block main
 
     div(class=" parent header", data-balloon-pos="down", data-balloon="Some long description telling about Header Image")
         .container.noborder.products
