@@ -4,6 +4,9 @@
 @import 'nav';
 @import 'misc';
 
+
+* { outline: 5px solid black; }
+
 .container {
   @extend .parent;
   background-color: $base_color;
