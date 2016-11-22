@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/agauniyal/wireframe.git"
   },
+  "scripts": {
+    "start": "node ./bin/www",
+    "run-debug": "DEBUG=express_example:* nodemon"
+  },
   "keywords": [
     "wireframe",
     "css",
