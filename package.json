@@ -27,6 +27,8 @@
     "gulp-eol": "^0.1.2",
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylelint": "^2.0.2"
+    "gulp-stylelint": "^2.0.2",
+    "gulp-open": "^2.0.0",
+    "gulp-connect": "^5.0.0"
   }
 }
