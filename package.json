@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "run-debug": "DEBUG=express_example:* nodemon"
+    "run-debug": "DEBUG=wireframe:* nodemon"
   },
   "keywords": [
     "wireframe",

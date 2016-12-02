@@ -23,7 +23,7 @@ node index.js
 
 * setup nodemon to run app
 * setup a [sass architecture](https://www.sitepoint.com/architecture-sass-project/)
-* sass not compiling with express middleware
+* sass not compiling with express middleware / use ``` Gulp sass ``` instead
 * setup routes for different wireframe examples
 
 #### some example routes have been setup in index.js
