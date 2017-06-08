@@ -1,5 +1,7 @@
 # wireframe
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/agauniyal/wireframe.svg)](https://greenkeeper.io/)
+
 **WIP** - minimal wireframing css-framework. Example index.html is given.
 
 How to develop:
