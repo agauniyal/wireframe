@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "run-debug": "DEBUG=wireframe:* nodemon -e js,json,scss index.js"
+    "watch": "DEBUG=wireframe:* nodemon -e js,json,scss index.js"
   },
   "keywords": [
     "wireframe",
