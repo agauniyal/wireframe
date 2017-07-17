@@ -8,8 +8,8 @@
     "url": "git+https://github.com/agauniyal/wireframe.git"
   },
   "scripts": {
-    "start": "node ./bin/www",
-    "run-debug": "DEBUG=wireframe:* nodemon"
+    "start": "node index.js",
+    "watch": "DEBUG=wireframe:* nodemon -e js,json,scss index.js"
   },
   "keywords": [
     "wireframe",
