@@ -67,7 +67,7 @@ gulp.task('lint-css', ['css-min'], function lintCssTask() {
 		.src(['css/**/*.css', '!css/normalize.css', '!css/bmin.css'])
 		.pipe(gulpStylelint({
 			reporters: [{
-        failAfterError: false,
+				failAfterError: false,
 				formatter: 'string',
 				console: true
 			}]
