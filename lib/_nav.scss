@@ -5,7 +5,7 @@
   background-color: $font-color;
 }
 
-.nav {
-  @extend .container;
+wf-nav {
+  @extend wf-container;
   min-height: 50px !important;
 }

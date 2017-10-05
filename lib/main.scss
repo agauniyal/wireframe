@@ -4,7 +4,7 @@
 @import 'nav';
 @import 'misc';
 
-.container {
+wf-container {
   @extend .parent;
   background-color: $base_color;
   padding         : 10px;
@@ -20,7 +20,7 @@
   }
 }
 
-.box {
+wf-box {
   padding         : 1rem;
   border          : 2px solid $box-border-color;
   margin          : 1rem;
@@ -34,27 +34,27 @@
   }
 }
 
-.box2 {
-  @extend .box;
+wf-box2 {
+  @extend wf-box;
   width: (100% / 2);
 }
 
-.box3 {
-  @extend .box;
+wf-box3 {
+  @extend wf-box;
   width: (100% / 3);
 }
 
-.box4 {
-  @extend .box;
+wf-box4 {
+  @extend wf-box;
   width: (100% / 4);
 }
 
-.box5 {
-  @extend .box;
+wf-box5 {
+  @extend wf-box;
   width: (100% / 5);
 }
 
-.header {
+wf-header {
   background-color: $border-color;
   height          : 350px;
   width           : 100%;
@@ -65,6 +65,6 @@
   }
 }
 
-.products > div {
+.products > * {
   height: 200px;
 }
