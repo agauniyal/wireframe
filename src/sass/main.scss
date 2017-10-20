@@ -1,0 +1,70 @@
+@import 'base';
+@import 'form';
+@import 'table';
+@import 'nav';
+@import 'misc';
+
+.container {
+  @extend .parent;
+  background-color: $base_color;
+  padding         : 10px;
+  border          : 2px solid $border-color;
+  max-width       : 90%;
+  min-height      : 200px;
+  margin          : 2rem auto;
+  transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
+  &:hover {
+    background-color: #fff;
+    border-color    : darken($border-color,5%);
+    transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
+  }
+}
+
+.box {
+  padding         : 1rem;
+  border          : 2px solid $box-border-color;
+  margin          : 1rem;
+  height          : 100px;
+  background-color: $box-background-color;
+  transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
+  &:hover {
+    background-color: lighten($box-background-color,3%);
+    border-color    : darken($border-color,5%);
+    transition      : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
+  }
+}
+
+.box2 {
+  @extend .box;
+  width: (100% / 2);
+}
+
+.box3 {
+  @extend .box;
+  width: (100% / 3);
+}
+
+.box4 {
+  @extend .box;
+  width: (100% / 4);
+}
+
+.box5 {
+  @extend .box;
+  width: (100% / 5);
+}
+
+.header {
+  background-color: $border-color;
+  height          : 350px;
+  width           : 100%;
+  transition      : background-color 300ms ease 50ms;
+  &:hover {
+    background-color: lighten($border-color,3%);
+    transition      : background-color 300ms ease 50ms;
+  }
+}
+
+.products > div {
+  height: 200px;
+}

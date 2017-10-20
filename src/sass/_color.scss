@@ -1,0 +1,8 @@
+$base-color          : #FBFBFC;
+$border-color        : #BDC7CF;
+$font-color          : #8A939F;
+$dark-color          : #686F81;
+$white               : #FFF;
+
+$box-border-color    : lighten($border-color, 5%);
+$box-background-color: lighten($border-color,15%);

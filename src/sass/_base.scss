@@ -1,0 +1,37 @@
+@import 'color';
+@import 'fonts';
+@import 'flex-helper';
+
+* {
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  height: 100%;
+  font-family: redacted;
+}
+
+body {
+  background-color: $base-color;
+  color           : $font-color;
+  font-size       : $base-font-size;
+  line-height     : $base-line-height;
+  min-height      : 100%;
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+  html {
+    font-size: 112%;
+  }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) {
+  html {
+    font-size: 120%;
+  }
+}

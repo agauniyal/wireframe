@@ -8,9 +8,12 @@
     "url": "git+https://github.com/agauniyal/wireframe.git"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "precommit": "lint-staged",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "eject": "react-scripts eject"
   },
   "keywords": [
@@ -27,7 +30,9 @@
   "dependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
+    "node-sass-chokidar": "0.0.3",
     "normalize.css": "^7.0.0",
+    "npm-run-all": "^4.1.1",
     "prettier": "^1.7.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

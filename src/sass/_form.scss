@@ -1,0 +1,207 @@
+form {
+  width: 70%;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background   : $box-background-color;
+  border       : 2px solid $box-border-color;
+  border-bottom: 4px solid darken($box-background-color,10%);
+  padding      : .5rem 2rem;
+  border-radius: 3px;
+  font-family  : "sans-serif";
+  cursor       : pointer;
+  transition   : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    background-color: darken($box-background-color,5%);
+    border          : 0;
+    transition      : background-color 300ms ease 50ms,border 300ms ease 50ms;
+  }
+  &:hover {
+    background-color: lighten($box-background-color,1%);
+    border-color    : darken($border-color,3%);
+    transition      : background-color 300ms ease 50ms,border 300ms ease 50ms;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  background   : $base-color;
+  border       : 2px solid $box-border-color;
+  border-bottom: 4px solid darken($box-background-color,10%);
+  padding      : .5rem 1rem;
+  transition   : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
+  width        : 70%;
+  font-family  : redacted;
+  color        : $font-color;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    background-color: lighten($base-color,2%);
+    transition      : background-color 300ms ease 50ms,border 300ms ease 50ms;
+  }
+  &:hover {
+    background-color: lighten($base-color,1%);
+    border-color    : darken($border-color,3%);
+    transition      : background-color 300ms ease 50ms,border 300ms ease 50ms;
+  }
+}
+
+.control-group {
+  display       : inline-block;
+	width         : 100%;
+	padding       : 1rem;
+	text-align    : left;
+	vertical-align: top;
+}
+
+.control {
+	position     : relative;
+	display      : block;
+	margin-bottom: .5rem;
+	padding-left : 2rem;
+	cursor       : pointer;
+}
+
+.control input {
+	position: absolute;
+	z-index : -1;
+	opacity : 0;
+}
+
+.control__indicator {
+	position  : absolute;
+	top       : 2px;
+	left      : 0;
+	width     : 20px;
+	height    : 20px;
+	background: $box-background-color;
+}
+
+.control--radio .control__indicator {
+	border-radius: 50%;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	background: $font-color;
+}
+
+.control input:checked ~ .control__indicator {
+	background: $dark-color;
+}
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+	background: $border-color;
+}
+
+.control input:disabled ~ .control__indicator {
+	pointer-events: none;
+	opacity       : .6;
+	background    : $border-color;
+}
+
+.control__indicator:after {
+	position: absolute;
+	display : none;
+	content : '';
+}
+
+.control input:checked ~ .control__indicator:after {
+	display: block;
+}
+
+.control--checkbox .control__indicator:after {
+	top         : 4px;
+	left        : 8px;
+	width       : 3px;
+	height      : 8px;
+	transform   : rotate(45deg);
+	border      : solid #fff;
+	border-width: 0 2px 2px 0;
+}
+
+.control--checkbox input:disabled ~ .control__indicator:after {
+	border-color: $font-color;
+}
+
+.control--radio .control__indicator:after {
+	top          : 7px;
+	left         : 7px;
+	width        : 6px;
+	height       : 6px;
+	border-radius: 50%;
+	background   : $white;
+}
+
+.control--radio input:disabled ~ .control__indicator:after {
+	background: $font-color;
+}
+
+.select {
+	position     : relative;
+	display      : inline-block;
+	width        : 100%;
+	margin-bottom: .5rem;
+}
+
+.select select {
+	display           : inline-block;
+	width             : 100%;
+	padding           : 10px 15px;
+	cursor            : pointer;
+	color             : $font-color;
+	border            : 0;
+	border-radius     : 0;
+	outline           : 0;
+	background        : $box-background-color;
+	appearance        : none;
+	-webkit-appearance: none;
+	-moz-appearance   : none;
+}
+
+.select select::-ms-expand {
+	display: none;
+}
+
+.select select:hover,
+.select select:focus {
+	color     : $font-color;
+	background: lighten($box-background-color,3%);
+}
+
+.select select:disabled {
+	pointer-events: none;
+	opacity       : .5;
+}
+
+.select__arrow {
+	position      : absolute;
+	top           : 16px;
+	right         : 15px;
+	width         : 0;
+	height        : 0;
+	pointer-events: none;
+	border-width  : 8px 5px 0 5px;
+	border-style  : solid;
+	border-color  : $dark-color transparent transparent transparent;
+}
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+	border-top-color: $dark-color;
+}
+
+.select select:disabled ~ .select__arrow {
+	border-top-color: lighten($dark-color,25%);
+}
