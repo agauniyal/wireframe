@@ -8,8 +8,10 @@
     "url": "git+https://github.com/agauniyal/wireframe.git"
   },
   "scripts": {
-    "start": "node index.js",
-    "watch": "DEBUG=wireframe:* nodemon -e js,json,scss index.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "keywords": [
     "wireframe",
@@ -23,25 +25,8 @@
   },
   "homepage": "https://github.com/agauniyal/wireframe#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "jade": "^1.11.0",
-    "stylus": "^0.54.5"
-  },
-  "devDependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect": "^5.0.0",
-    "gulp-cssfmt": "^1.0.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-eol": "^0.1.2",
-    "gulp-open": "^2.0.0",
-    "gulp-sass": "^2.3.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylelint": "^2.0.2",
-    "node-sass": "^3.13.0",
-    "node-sass-middleware": "^0.10.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
   }
 }
