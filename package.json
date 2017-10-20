@@ -8,6 +8,7 @@
     "url": "git+https://github.com/agauniyal/wireframe.git"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -25,8 +26,17 @@
   },
   "homepage": "https://github.com/agauniyal/wireframe#readme",
   "dependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --no-semi --write",
+      "git add"
+    ]
   }
 }
