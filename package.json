@@ -8,8 +8,13 @@
     "url": "git+https://github.com/agauniyal/wireframe.git"
   },
   "scripts": {
-    "start": "node index.js",
-    "watch": "DEBUG=wireframe:* nodemon -e js,json,scss index.js"
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "precommit": "lint-staged",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "eject": "react-scripts eject"
   },
   "keywords": [
     "wireframe",
@@ -23,25 +28,20 @@
   },
   "homepage": "https://github.com/agauniyal/wireframe#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "jade": "^1.11.0",
-    "stylus": "^0.54.5"
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "node-sass-chokidar": "0.0.3",
+    "normalize.css": "^7.0.0",
+    "npm-run-all": "^4.1.1",
+    "prettier": "^1.7.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
   },
-  "devDependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect": "^5.0.0",
-    "gulp-cssfmt": "^1.0.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-eol": "^0.1.2",
-    "gulp-open": "^2.0.0",
-    "gulp-sass": "^2.3.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylelint": "^2.0.2",
-    "node-sass": "^3.13.0",
-    "node-sass-middleware": "^0.10.0"
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --no-semi --write",
+      "git add"
+    ]
   }
 }
