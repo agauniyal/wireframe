@@ -13,10 +13,12 @@ html {
 
 /**
  * Remove the margin in all browsers (opinionated).
+ * Added padding in all browsers 1px
  */
 
 body {
   margin: 0;
+  padding: 1px;
 }
 
 /* HTML5 display definitions
