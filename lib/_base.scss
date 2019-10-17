@@ -1,6 +1,6 @@
-@import 'color';
-@import 'fonts';
-@import 'flex-helper';
+@import "color";
+@import "fonts";
+@import "flex-helper";
 
 * {
   &:after,
@@ -16,10 +16,10 @@ html {
 
 body {
   background-color: $base-color;
-  color           : $font-color;
-  font-size       : $base-font-size;
-  line-height     : $base-line-height;
-  min-height      : 100%;
+  color: $font-color;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  min-height: 100%;
 }
 
 /* Medium screens (640px) */
@@ -34,4 +34,20 @@ body {
   html {
     font-size: 120%;
   }
+}
+
+.sz1 {
+  font-size: 16px;
+}
+
+.sz2 {
+  font-size: 24px;
+}
+
+.sz3 {
+  font-size: 32px;
+}
+
+.sz4 {
+  font-size: 40px;
 }
