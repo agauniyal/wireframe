@@ -10,7 +10,8 @@ input[type="reset"] {
   border-bottom: 4px solid darken($box-background-color,10%);
   padding      : .5rem 2rem;
   border-radius: 3px;
-  font-family  : "sans-serif";
+  font-family  : redacted;
+  color        : $font-color;
   cursor       : pointer;
   transition   : background-color 300ms ease 50ms,border-color 300ms ease 50ms;
   &:focus {
