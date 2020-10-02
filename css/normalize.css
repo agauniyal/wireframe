@@ -5,6 +5,12 @@
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
